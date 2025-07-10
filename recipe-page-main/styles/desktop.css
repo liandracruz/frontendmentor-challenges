@@ -22,14 +22,14 @@ body {
     background-color: var(--color2);
     font-family: var(--font-body);
     font-weight: 300;
-    /*padding: ; ???*/
+    padding-top: 40px ;
 }
 
 main {
     background-color: var(--color1);
     max-width: 40vw;
     margin: auto;
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.137);
 }
@@ -58,6 +58,12 @@ aside {
     padding: 5px 15px;
 }
 
+h2 {
+    font-family: var(--font-title);
+    color: var(--color6);
+    font-weight: 500;
+}
+
 aside h2 {
     margin-top: 10px;
     font-family: var(--font-body);
@@ -66,22 +72,56 @@ aside h2 {
     color: var(--color7);
 }
 
-aside ul {
-
+ol li, ul li {
+    position: relative;
+    padding-left: 15px;
 }
 
-h2 {
-    font-family: var(--font-title);
+ul li strong {
+    font-weight: 600;
+}
+
+ul li::marker {
     color: var(--color6);
+    font-size: 0.7em;
+}
+
+aside ul li::marker {
+    color: var(--color7);
+}
+
+ol li::marker {
     font-weight: 500;
+    color: var(--color6);
 }
 
-ul, ol {
-    
+hr {
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid var(--color3);
 }
 
-table {
+table, table tr {
+    width: 100%;
+    border-collapse: collapse;
+}
 
+table tr {
+    border-bottom: 1px solid var(--color3);
+}
+
+table tr:last-child {
+    border-bottom: none;
+}
+
+table td {
+    padding: 8px;
+    color: var(--color4);
+}
+
+table td strong {
+    color: var(--color6);
+    font-weight: 600;
 }
 
 .attribution {
@@ -92,4 +132,8 @@ table {
 a {
     text-decoration: none;
     color: var(--color7);
+}
+
+a:hover {
+    color: var(--color6);
 }
